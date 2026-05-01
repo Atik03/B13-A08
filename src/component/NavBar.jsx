@@ -36,14 +36,7 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="hidden lg:block">
-          <Image
-            src={"/images/logo.jpg"}
-            alt="logo"
-            loading="eager"
-            width={50}
-            height={50}
-            className="object-cover h-auto w-auto"
-          />
+          <Image src={"/images/logo.jpg"} alt="logo" width={50} height={50} />
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
