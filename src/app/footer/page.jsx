@@ -24,7 +24,7 @@ export default function Footer() {
           <div className="text-center">
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Email: support@yourbrand.com</li>
+              <li>Email: support@tilesbrand.com</li>
               <li>Phone: +880 1234-567890</li>
               <li>Address: Dhaka, Bangladesh</li>
             </ul>
