@@ -42,7 +42,7 @@
     "brand": "WoodTex",
     "finish": "Matte",
     "usage": "Floor",
-    "inStock": true
+    "inStock": false
   },
   {
     "id": "tile_004",
@@ -87,7 +87,7 @@
     "brand": "DarkEdge",
     "finish": "Matte",
     "usage": "Wall & Floor",
-    "inStock": true
+    "inStock": false
   },
   {
     "id": "tile_007",
@@ -132,7 +132,7 @@
     "brand": "FreshWall",
     "finish": "Glossy",
     "usage": "Wall",
-    "inStock": true
+    "inStock": false
   },
   {
     "id": "tile_010",
