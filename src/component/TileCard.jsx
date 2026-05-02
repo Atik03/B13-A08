@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const TileCard = ({ tile }) => {
@@ -10,6 +11,7 @@ const TileCard = ({ tile }) => {
           alt={tile.title}
           fill
           className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </figure>
 
@@ -36,7 +38,9 @@ const TileCard = ({ tile }) => {
         </div>
 
         <div className="card-actions justify-end mt-4">
-          <button className="btn btn-primary w-full">View Details</button>
+          <Link href={`/tiles/${tile.id}`} className="w-full">
+            <button className="btn btn-primary w-full">View Details</button>
+          </Link>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ async function TilesFeature() {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-5 py-5 px-5 lg:px-0">
-      <h1 className="col-span-full text-2xl font-bold text-center">
+      <h1 className="col-span-full text-3xl md:text-4xl font-bold text-center">
         Featured Tile Collections
       </h1>
       {topPhotos.map((tile) => (
