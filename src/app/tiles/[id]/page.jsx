@@ -13,7 +13,7 @@ async function CardDetails({ params }) {
   console.log("Filtered Photos:", filteredPhotos);
 
   return (
-    <div>
+    <div >
       {filteredPhotos.length > 0 ? (
         filteredPhotos.map((photo) => {
           return <TilesPhotoDetails key={photo.id} tile={photo} />;
