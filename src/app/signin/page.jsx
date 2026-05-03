@@ -1,29 +1,34 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
+import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
+import { FcGoogle } from "react-icons/fc";
 
-const SignUpPage = () => {
+const LogInPage = () => {
+  const handleGoogleLogin = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+  };
   const {
     register,
     handleSubmit,
-
+    watch,
     formState: { errors },
   } = useForm();
 
   const [isShowPassword, setIsShowPassword] = useState(false);
 
-  const handleRegisterFunc = async (data) => {
+  const handleLoginFunc = async (data) => {
     console.log(data, "data");
-    const { email, name, photo, password } = data;
 
-    const { data: res, error } = await authClient.signUp.email({
-      name: name,
-      email: email,
-      password: password,
-      image: photo,
+    const { data: res, error } = await authClient.signIn.email({
+      email: data.email,
+      password: data.password,
+      rememberMe: true,
       callbackURL: "/",
     });
 
@@ -32,7 +37,7 @@ const SignUpPage = () => {
     }
 
     if (res) {
-      toast.success("Signup successful");
+      toast.success("Login successful");
     }
   };
 
@@ -40,40 +45,10 @@ const SignUpPage = () => {
     <div className="container mx-auto min-h-[80vh] flex justify-center items-center">
       <div className="p-4 rounded-xl bg-white">
         <h2 className="font-bold text-3xl text-center mb-6">
-          SignUp your account
+          Login your account
         </h2>
 
-        <form className="space-y-4" onSubmit={handleSubmit(handleRegisterFunc)}>
-          <fieldset className="fieldset">
-            <legend className="fieldset-legend">Name</legend>
-            <input
-              type="text"
-              className="input"
-              placeholder="Type here name"
-              {...register("name", {
-                required: "Name field is required",
-              })}
-            />
-            {errors.name && (
-              <p className="text-red-500">{errors.name.message}</p>
-            )}
-          </fieldset>
-
-          <fieldset className="fieldset">
-            <legend className="fieldset-legend">Photo URL</legend>
-            <input
-              type="text"
-              className="input"
-              placeholder="Type here photo url"
-              {...register("photo", {
-                required: "Photo URL field is required",
-              })}
-            />
-            {errors.photo && (
-              <p className="text-red-500">{errors.photo.message}</p>
-            )}
-          </fieldset>
-
+        <form className="space-y-4" onSubmit={handleSubmit(handleLoginFunc)}>
           <fieldset className="fieldset">
             <legend className="fieldset-legend">Email</legend>
             <input
@@ -88,7 +63,6 @@ const SignUpPage = () => {
               <p className="text-red-500">{errors.email.message}</p>
             )}
           </fieldset>
-
           <fieldset className="fieldset relative">
             <legend className="fieldset-legend">Password</legend>
             <input
@@ -100,7 +74,7 @@ const SignUpPage = () => {
               })}
             />
             <span
-              className="absolute right-8 top-4 cursor-pointer"
+              className="absolute right-2 top-4 cursor-pointer"
               onClick={() => setIsShowPassword(!isShowPassword)}
             >
               {isShowPassword ? <FaEye /> : <FaEyeSlash />}
@@ -110,11 +84,24 @@ const SignUpPage = () => {
             )}
           </fieldset>
 
-          <button className="btn w-full bg-blue-500 text-white">Sign Up</button>
+          <button className="btn w-full bg-blue-500 text-white">Login</button>
         </form>
+        <button
+          className="btn w-full bg-slate-500 text-white mt-2"
+          onClick={handleGoogleLogin}
+        >
+          Login with Google <FcGoogle />
+        </button>
+
+        <p className="mt-4">
+          Don't have an account?{" "}
+          <Link href={"/signup"} className="text-blue-500">
+            Register
+          </Link>
+        </p>
       </div>
     </div>
   );
 };
 
-export default SignUpPage;
+export default LogInPage;
