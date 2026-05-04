@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Project Name: Tiles Brand
+  
+## Description:
+This is a modern Next.js-based tile brand web application designed to provide customers with a seamless and visually engaging platform to explore premium tile collections for residential, commercial, and interior design needs. The project offers a responsive and user-friendly experience where users can easily browse various categories such as ceramic, marble, porcelain, and luxury tiles, search products efficiently, and access detailed tile information through dedicated product pages. Built with Next.js for optimized performance, fast loading, SEO-friendly architecture, and smooth navigation, the platform ensures accessibility across desktop, tablet, and mobile devices. The system combines stylish design with practical functionality, making it simple for customers to discover durable, elegant, and modern tile solutions while strengthening the digital presence of a professional tile brand.
 
-## Getting Started
+## Technologies Used.
+Nextjs, 
+Tailwind CSS, 
+DaisyUI JavaScript (ES6+), 
+React-Toastify (NPM Package), 
+JSON (for product data),
+SwiperJS,
+Better Auth,
+mongoDB
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Features.
+#Modern Home Page Experience
+A visually appealing and responsive homepage designed to showcase the tile brand, highlight premium collections, and create a professional first impression for    users across all devices.
+#All Tiles Gallery Page
+A dedicated tile collection page where users can browse all available tile products, view product thumbnails, search tiles by title, and explore different categories with a smooth user-friendly interface.
+#Detailed Tile Product Page
+Each tile has its own detailed product page displaying full product information including image, title, category, material, dimensions, price, stock status, and brand details for better customer decision-making.
+#Authentication System (Login & Signup)
+Secure user authentication system with Login and Signup functionality, allowing users to create accounts, sign in safely, and access personalized features with protected routes.
+#Proxy-Based Data Fetching & API Integration
+Proxy implementation is used for efficient and secure data handling, improving API communication, managing requests effectively, and ensuring better project structure and performance.
