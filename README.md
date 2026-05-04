@@ -14,13 +14,8 @@ Better Auth,
 mongoDB
 
 ## Features.
-#Modern Home Page Experience
-A visually appealing and responsive homepage designed to showcase the tile brand, highlight premium collections, and create a professional first impression for    users across all devices.
-#All Tiles Gallery Page
-A dedicated tile collection page where users can browse all available tile products, view product thumbnails, search tiles by title, and explore different categories with a smooth user-friendly interface.
-#Detailed Tile Product Page
-Each tile has its own detailed product page displaying full product information including image, title, category, material, dimensions, price, stock status, and brand details for better customer decision-making.
-#Authentication System (Login & Signup)
-Secure user authentication system with Login and Signup functionality, allowing users to create accounts, sign in safely, and access personalized features with protected routes.
-#Proxy-Based Data Fetching & API Integration
-Proxy implementation is used for efficient and secure data handling, improving API communication, managing requests effectively, and ensuring better project structure and performance.
+Modern Home Page: Responsive and visually engaging homepage showcasing the tile brand and premium collections.
+All Tiles Gallery: Searchable tile collection page with product browsing and category exploration.
+Tile Details Page: Dedicated product pages with complete tile information and specifications.
+Authentication System: Secure Login and Signup with protected user access.
+Proxy & API Integration: Efficient and secure data fetching with optimized API handling.
