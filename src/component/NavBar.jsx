@@ -32,7 +32,7 @@ const NavBar = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-2 mt-3 w-52 p-2 shadow"
           >
             <NavLink href={"/"}>Home</NavLink>
             <NavLink href={"/tiles"}>All Tiles</NavLink>
@@ -52,7 +52,7 @@ const NavBar = () => {
       </div>
 
       <div className="navbar-end gap-4">
-        {user && <h2>Hello, {user.name}</h2>}
+        {user && <h2 className="hidden md:block">Hello, {user.name}</h2>}
 
         <div>
           {isPending ? (
